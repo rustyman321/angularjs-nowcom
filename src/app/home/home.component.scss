@@ -1,0 +1,21 @@
+form {
+	position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 175px;
+    display: block;
+    text-align: center;
+
+    input[type="text"] {
+    	padding-top: 22px;
+    	padding-bottom: 22px;
+    	position: relative;
+    }
+
+    input[type="submit"] {
+        position: absolute;
+    	top: 4px;
+    	right: 3px;
+    }
+}

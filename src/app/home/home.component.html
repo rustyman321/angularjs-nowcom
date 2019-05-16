@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<form>
+				<div class="form-group">
+					<input type="text" name="searchTxt" [(ngModel)]="searchTxt" class="form-control" placeholder="Search Image...">
+					<input type="submit" [value]="btntxt" (click)="searchImage()" class="btn btn-primary">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="container" [@picsanimate]="response.length">
+	<div class="row text-center">
+		{{ fail }}
+		<h2 *ngIf="response.length" class="text-center">Search Result:</h2>
+		<div class="col-12" *ngIf="containerResponse">
+			<div class="row" *ngFor="let res of response">
+				<div class="col-md-3" *ngFor="let picture of res">
+					<div class="img-container">
+						<img src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}.jpg" alt="{{ picture.title }}" title="{{ picture.title }}">
+						<a routerLink="page/{{picture.id}}"><span>{{ picture.title }}</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div
+	infiniteScroll
+	[infiniteScrollDistance]="2"
+	[infiniteScrollThrottle]="1000"
+	(scrolled)="onScrollload()">
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<img src="assets/images/loader.gif" alt="loader" title="loader" *ngIf="loader">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+.heading {
+	background: url(/assets/images/background.jpg);
+	background-size:cover;
+	padding: 170px 0;
+
+	&:before {
+		content: " ";
+	    height: 60px;
+	    background: #1344a0;
+	    margin-bottom: 100px;
+	    width: 100%;
+	    position: absolute;
+	    top: 0;
+    }
+
+    &:after {
+    	content: " ";
+	    height: 15px;
+	    background: #0d52d4;
+	    position: absolute;
+	    top: 60px;
+	    width: 100%;
+    }
+
+	.logo {
+		border: 3px solid #383434;
+	    padding: 15px 15px;
+    	border-radius: 3px;
+    	margin-bottom: 50px;
+    	background: #fff;
+    	transition: 0.5s all;
+
+    	&:hover {
+    		background: transparent;
+    		border-color: #fff;
+    	}
+	}
+
+	h1 {
+		color: #fff;
+    	line-height: 55px;
+	    margin: 50px 0;
+	}
+}
+
+
+.img-container {
+	position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow:hidden;
+    transition:0.5s all;
+    
+	img {
+		width: auto;
+	    object-fit: none;
+	    max-width: 100%;
+	    text-align: center;
+	    margin: 0 auto;
+	    display: block;
+	}
+
+	a,
+	.img-title {
+		display: block;
+	    background: rgba(3, 69, 255, 0.5);
+	    color: #fff;
+	    text-decoration: none !important;
+	    bottom: 0px;
+	    position: absolute;
+	    width: 100%;
+	    padding: 8px 0;
+	    transition: 0.5s all;
+
+	    &:after {
+	    	content: "View";
+		    display: block;
+		    background: rgba(19, 17, 17, 0.7);
+		    position: absolute;
+		    width: 100%;
+		    bottom: -30px;
+		    height: 30px;
+		    padding: 5px 0;
+		    transition: 0.5s all;
+	    }
+	}
+
+	.img-title {
+		text-align: center;
+		&:after {
+			content: none;
+		}
+	}
+
+	&:hover {
+		box-shadow: 0px 1px 5px 3px #444343;
+
+		a {
+			color: #fff;
+			padding: 10px 0 30px 0;
+
+			&:after {
+				bottom: -1px;
+			}
+		}
+	}
+}

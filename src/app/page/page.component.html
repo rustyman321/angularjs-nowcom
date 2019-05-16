@@ -1,0 +1,98 @@
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<a routerLink="" class="home-link">Go Back to Home page</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			{{ fail }}
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+			<div class="img-container">
+				<img src="{{ imageSrc }}" title="{{ imageDetails?.title._content }}" alt="{{ imageDetails?.description._content }}">
+				<span class="img-title">{{ imageDetails?.title._content }}</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+			<div class="img-details" *ngIf="imageDetails">
+				<div class="card">
+				    <div class="card-header bg-primary text-white">Image ID</div>
+				    <div class="card-body">{{ imageDetails?.id }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-info text-white">Image Secret key</div>
+				    <div class="card-body">{{ imageDetails?.secret }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-primary text-white">Image Server</div>
+				    <div class="card-body">{{ imageDetails?.server }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-info text-white">Image Farm</div>
+				    <div class="card-body">{{ imageDetails?.farm }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-primary text-white">Image Comment Count</div>
+				    <div class="card-body">{{ imageDetails?.comments._content }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-info text-white">Views Count</div>
+				    <div class="card-body">{{ imageDetails?.views }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-primary text-white">Image Owner NSID</div>
+				    <div class="card-body">{{ imageDetails?.owner.nsid }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-info text-white">Image Owner Username</div>
+				    <div class="card-body">{{ imageDetails?.owner.username }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-primary text-white">Image Owner Alias</div>
+				    <div class="card-body">{{ imageDetails?.owner.path_alias }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-info text-white">Image Title</div>
+				    <div class="card-body">{{ imageDetails?.title._content }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-primary text-white">Image Description</div>
+				    <div class="card-body">{{ imageDetails?.description._content }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-info text-white">Date Lastupdate</div>
+				    <div class="card-body">{{ imageDetails?.dates.lastupdate }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-primary text-white">Date Posted</div>
+				    <div class="card-body">{{ imageDetails?.dates.posted }}</div> 
+				</div>
+				<br>
+				<div class="card">
+				    <div class="card-header bg-info text-white">Date Taken</div>
+				    <div class="card-body">{{ imageDetails?.dates.taken }}</div> 
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>
